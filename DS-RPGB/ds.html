@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width">
+<html>
+	<head>
+		<title>DS-RPGB InDev ver0</title>
+		<script type="text/javascript" src="enemy-var.js"></script>
+	</head>
+	<body>
+		<style>
+			@font-face {font-family: mainFont;src: url(PrincessSavesYou.ttf)}
+			html {background-color: black;color: white;font-family: mainFont}
+			h2 {text-align: center; margin: 5px 0 5px 0}
+			.ehp {text-align: center}
+			.pfp {width: 50px; height: 50px; margin-right: 3px}
+			.demo {position: absolute; top: -15px; left: 10px}
+			.floor {position: absolute; top: -5px; left: 10px}
+			.elook {width: 100%; height: 450px; margin-top: 56px; object-fit: contain}
+			
+			.act {
+				width: 100%;
+				display: flex;
+				justify-content: center;
+			}
+			
+			button {
+				width: 80px;
+				height: 60px;
+				margin: 5px;
+				background-color: black;
+				border: solid 3px white;
+				color: white;
+				font-family: mainFont;
+				font-size: 11px;
+			}
+			
+			h4 {
+				margin-top: 0px;
+				margin-bottom: 0px;
+			}
+			
+			h3 {
+				margin-top: 0px;
+				margin-bottom: 5px;
+			}
+			
+			h6 {
+				font-size: 9px;
+			}
+			
+			.member {
+				border: solid 2px white;
+				background-color: black;
+				width: 125px;
+				font-size: 9px;
+				display: flex;
+				flex-direction: row;
+				padding: 5px 0 5px 0;
+			}
+			
+			.stats {
+				display: flex;
+				justify-content: space-between;
+				flex-direction: row;
+			}
+			
+			.enemy {
+				height: 66%;
+				background-image: url("sprite/bg/bg-dungeon.png");
+				background-repeat: no-repeat;
+				background-position: 50% 0;
+				background-size: contain;
+				background-attachment: local;
+			}
+			
+			.info {
+				border: solid 2px white;
+				background-color: black;
+				position: absolute;
+				width: 94%;
+				height: 75px;
+				left: 1.5%;
+				font-size: 13px;
+				padding: 5px;
+			}
+		</style>
+		<iframe src="audio/music/silence.mp3" allow="autoplay" style="display: none"></iframe>
+		<audio autoplay loop>
+			<source src="audio/music/dungeon.mp3" type="audio/mp3">
+		</audio>
+		<div class="enemy">
+			<h2><span id="ename"></span></h2>
+			<h3 class="ehp">health : <span id ="ehp"></span></h3>
+			<div class="info">
+				<h4> Damage : <span id="edamage"></span></h4>
+				<h4> Description : <span id="edes"></span></h4>
+			</div>
+			<image src="sprite/enemy/slime.png" class="elook" id="eima"></image>
+		</div>
+		<div class="stats">
+			<div class="member">
+				<image src="sprite/pfp/kade-rw-ver.png" class="pfp"></image>
+				<div>
+					<h3><span id="memaname"></h3>
+					<h4>HP <span class="memahp"></h4>
+					<h4>Lvl <span class="memalvl"></h4>
+				</div>
+			</div>
+			<div class="member">
+				<image src="sprite/pfp/ilham-rw-ver.png" class="pfp"></image>
+				<div>
+					<h3><span id="membname"></h3>
+					<h4>HP <span class="membhp"></h4>
+					<h4>Lvl <span class="memblvl"></h4>
+				</div>
+			</div>
+			<div class="member">
+				<image src="sprite/pfp/radit-rw-ver.png" class="pfp"></image>
+				<div>
+					<h3><span id="memcname"></h3>
+					<h4>HP <span class="memchp"></h4>
+					<h4>Lvl <span class="memclvl"></h4>
+				</div>
+			</div>
+		</div>
+		<div class="act">
+			<button id="atta">attack</button>
+			<button id="info">info</button>
+			<button id="heal">heal (<span id="healcount"></span>)</button>
+			<button id="inve">inventory</button>
+		</div>
+		<h6 class="demo">DS-RPGB InDev ver0</h6>
+		<h6 class="floor">room <span id="fl"></span> - Dungeon</h6>
+	</body>
+	<script type="text/javascript" src="gamescript.js"></script>
+</html>
