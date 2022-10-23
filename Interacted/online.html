@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+<html>
+	<head>
+		<title>Interacted</title>
+		<style>
+			body {
+				display: flex;
+				background-color: #100040;
+			}
+			
+			.user, .user2 {display: flex; padding: 2%}
+			
+			.user {background-color: #23008c}
+			.user2 {background-color: #222222}
+			
+			::-webkit-scrollbar {
+				width: 10px;
+			}
+			
+			::-webkit-scrollbar-thumb {
+				background: #222222;
+				border-radius: 5px;
+			}
+			
+			.clist {
+				background-color: #1a0066;
+				color: white;
+				height: 97.5vh;
+				width: 50vw;
+				padding: 0 1% 0 1%;
+			}
+			
+			.chat {
+				background-color: #000000;
+				color: white;
+				height: 97.5vh;
+				width: 100vw;
+				margin: 0 0 0 1%;
+				padding: 0 1% 0 1%;
+			}
+			
+			.pfp {border-radius: 50px; width: 10%; height: 10%;}
+			.base {height: 73%; overflow: auto;}
+			.send {height: 3.5%; background-color: #222222; padding: 2%; display: flex;}
+			input {background: transparent; border: solid 1px #333333; width: 91%; color: white}
+			button {background: transparent; border: solid 1px #333333; color: white}
+		</style>
+	</head>
+	<body>
+		<div class="clist">
+			<div class="user">
+				<img src="https://assets.stickpng.com/images/585e4bf3cb11b227491c339a.png" width="20%" height="20%"/>
+				<h2>User150</h2>
+			</div>
+		</div>
+		<div class="chat">
+			<div class="user2">
+				<img src="pfp-1.png" class="pfp"/>
+				<h2>BotUwU</h2>
+			</div>
+			<div class="base" id="base">
+				<p>hewwo im botuwu~ im just hewe uwu to tawk wif chu~ if chu have time we can cuddwe each othew owo</p>
+			</div>
+			<div class="send">
+				<input type="text" id="mes"/>
+				<button onclick="sendmes()">Send</button>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="chat.js"></script>
+	<script>
+		var bot = setInterval(botres, 100);
+		var resp = 0;
+		var sendback = false;
+		function sendmes() {
+			var message = document.getElementById("mes").value;
+			if (message != "") {
+				var tag = document.createElement("p");
+				tag.style.textAlign = "right";
+				tag.style.color = "#aaaaaa";
+				var text = document.createTextNode(message);
+				tag.appendChild(text);
+				var element = document.getElementById("base");
+				element.appendChild(tag);
+				element.scrollTop = element.scrollHeight;
+				document.getElementById("mes").value = "";
+				resp = 0;
+				sendback = true;
+			}
+		}
+		
+		function botres() {
+			resp = resp + 1;
+			if (resp > 25 && sendback == true) {
+				var c = Math.floor(Math.random(0, 1) * chat.length);
+				var tag2 = document.createElement("p");
+				var text2 = document.createTextNode(chat[c]);
+				tag2.appendChild(text2);
+				var element = document.getElementById("base");
+				element.appendChild(tag2);
+				element.scrollTop = element.scrollHeight;
+				sendback = false;
+			}
+		}
+		
+		document.getElementById("mes").addEventListener("keydown", function (e) {
+			if (e.code === "Enter") {
+				sendmes();
+			}
+		});
+	</script>
+</html>
