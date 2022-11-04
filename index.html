@@ -67,6 +67,11 @@
 		<h1>DSGD's random web - DEMO</h1>
 		<h2>Music stuff</h2>
 		<div class="sel">
+			<a onclick=enCode()>
+				<img src="enter-code.png" class="thumb"/>
+				<h3>Enter Code</h3>
+				<h5>Got some code from me? enter here</h5>
+			</a>
 			<a href="https://youtu.be/lQVSzg8rhB4">
 				<img src="https://i.ytimg.com/vi/lQVSzg8rhB4/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2PaPgNH6JVWtj98qtd6iwZBUb1Q" class="thumb"/>
 				<h3>Calm Over Stress</h3>
@@ -132,4 +137,14 @@
 		</div>
 		<h3>Web By DiamondSpaceGD, Hosted by GitHub</h3>
 	</body>
+	<script>
+		function enCode() {
+			var code = prompt("Code (Case Sensitive):");
+			if (code == "DelThiTweetDemo") {
+				window.location.href = "https://youtu.be/zWBVH-hobQU";
+			} else {
+				alert("incorrect code!");
+			}
+		}
+	</script>
 </html>
