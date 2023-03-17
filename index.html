@@ -1,106 +1,60 @@
 <html>
 	<head>
+        <meta name="viewport" content="width=device-width">
 		<meta property="og:title" content="DSGD's Random web"/>
 		<meta property="og:description" content="DiamondSpaceGD's Random web - still work in progress"/>
 		<title>DSGD's random website</title>
 		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<style>
-			html {
-				background-color: #222222;
-				color: white;
-			}
-			
-			a {
-				text-decoration: none;
-				color: #FDFDFD;
-				margin: 0 5px 0 5px;
-				padding: 5px;
-				border: solid 2px white;
-				border-radius: 5%;
-				transition: background-color 0.25s, padding 0.5s, color 0.25s;
-			}
-			
-			a:hover {
-				background-color: #686859;
-				padding: 10px 5px 10px 5px;
-			}
-			
-			a:active {
-				background-color: white;
-				color: black;
-			}
-			
-			h3,h4,h5,h6 {margin: 0}
-			img {border-radius: 5%}
-			
-			.sel {
-				display: flex;
-				flex-direction: row;
-				overflow: auto;
-			}
-			
-			.thumb {
-				width: 275px;
-				height: 150px;
-			}
-			
-			.random {
-				overflow: hidden;
-				display: flex;
-				width: 100%;
-				flex-direction: column;
-			}
-			
-			.wide {width: 100%}
-			
-			::-webkit-scrollbar {
-				width: 10px;
-			}
-			
-			::-webkit-scrollbar-thumb {
-				background: black;
-				border-radius: 15px;
-			}
-		</style>
+		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		<h1>DSGD's random web - DEMO</h1>
+        <div class="header">
+            <h2>DiamondSpaceGD's Random Web</h2>
+        </div>
+        
+	    <div>
+	        <p style="font-size:35px;color:#121212">spacing</p>
+	    </div>
+	    <img src="profile.jpg" class="profile">
+	        <h3 class="introduct">DiamondSpaceGD</h3>
+	        <h5 class="introduct">Composser - Gamer - Artist - Programmer</h3><br>
+	        <h6 class="introduct Des">Found in : Geometry Dash • Fancade (DSGD Games) • Mini World • Minecraft</h3>
 		<h2>Music stuff</h2>
 		<div class="sel">
 			<a onclick=enCode()>
 				<img src="enter-code.png" class="thumb"/>
 				<h3>Enter Code</h3>
-				<h5>Got some code from me? enter here</h5>
+				<h5 class="des">Got some code from me? enter here</h5>
 			</a>
 			<a href="https://youtu.be/lQVSzg8rhB4">
 				<img src="https://i.ytimg.com/vi/lQVSzg8rhB4/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD2PaPgNH6JVWtj98qtd6iwZBUb1Q" class="thumb"/>
 				<h3>Calm Over Stress</h3>
 				<h5>By DiamondSpaceGD</h5>
-				<h6>"Another original music"</h6>
+				<h6 class="des">"Another original music"</h6>
 			</a>
 			<a href="https://youtu.be/QwKm3O9Xttg">
 				<img src="https://i.ytimg.com/vi/QwKm3O9Xttg/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCE_mZg2Xa9EfXdIDfYVmNlYPagIw" class="thumb"/>
 				<h3>The Library</h3>
 				<h5>Original by ShiZi</h5>
-				<h6>"But its Puro's first time using FL studio Mobile"</h6>
+				<h6 class="des">"But its Puro's first time using FL studio Mobile"</h6>
 			</a>
 			<a href="https://youtu.be/JM2AcM5q3XY">
 				<img src="https://i.ytimg.com/vi/JM2AcM5q3XY/hqdefault.jpg?sqp=-oaymwEcCOADEI4CSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSZMJig8mmF62SzTLGsW14V88_zw" class="thumb"/>
 				<h3>Waking Up</h3>
 				<h5>By DiamondSpaceGD</h5>
-				<h6>"Short, unused music"</h6>
+				<h6 class="des">"Short, unused music"</h6>
 			</a>
 			<a href="https://youtu.be/byRuU7Gz2ws">
 				<img src="https://i.ytimg.com/vi/byRuU7Gz2ws/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDbmWkS983gF1NPuxK6HzUZ7oE9GA" class="thumb"/>
 				<h3>Bad Ending</h3>
 				<h5>Original by ShiZi</h5>
-				<h6>"DSGD Remix" (MOST WATCHED)</h6>
+				<h6 class="des">"DSGD Remix" (MOST WATCHED)</h6>
 			</a>
 			<a href="https://youtu.be/NZL2Q-pa2Gw">
 				<img src="https://i.ytimg.com/vi/NZL2Q-pa2Gw/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBipbr0qFBQ7DLm22shVK0E5-0ikg" class="thumb"/>
 				<h3 >Village</h3>
 				<h5>By DiamondSpaceGD</h5>
-				<h6>"First original music"</h6>
+				<h6 class="des">"First original music"</h6>
 			</a>
 		</div>
 		<h2>Channel</h2>
@@ -108,34 +62,27 @@
 			<a href="https://www.youtube.com/channel/UCS0Fu20S4mOziBZwi3w21Xg">
 				<img src="https://yt3.ggpht.com/1b_XdNjGBLRBrWmrmI1kumYfm93ycl_7WcZltzTOjC-nbUTgYMRZm6wHxh-kApIWv4DvxWyz-g=s88-c-k-c0x00ffffff-no-rj"/>
 				<h3>Music Channel</h3>
-				<h6>DiamondSpaceGD - Music</h6>
-			</a>
-		</div>
-		<h2>Fancade Games</h2>
-		<div class="sel">
-			<a href="https://fancade.page.link/FwY6">
-				<img src="https://media.discordapp.net/attachments/546353645923598347/872657313872359485/IMG_20210805_084436.jpg?width=200&height=200"/>
-				<h3>Ds2</h3>
-				<h5>[MOST PLAYED]</h5>
-			</a>
-			<a href="https://play.fancade.com/6218DD08F6E032A1">
-				<img src="https://media.discordapp.net/attachments/546353645923598347/957939800537722881/fancade.png?width=200&height=200"/>
-				<h3>The Runner</h3>
-				<h5>[SECOND MOST PLAYED]</h5>
+				<h6 class="des">DiamondSpaceGD - Music</h6>
 			</a>
 		</div>
 		<h2>Other Random Web</h2>
 		<div class="random">
 			<a href="DS-RPGB/ds.html" class="wide">
 				<h3>DS-RPGB</h3>
-				<h4>A broken, discountinued turn-based combat game (works better on mobile actually)</h4>
+				<h4 class="des">A broken, discountinued turn-based combat game (works better on mobile actually)</h4>
 			</a>
 			<a href="Interacted/online.html" class="wide">
 				<h3>Interacted</h3>
-				<h4>Connect you to Other dimension</h4>
+				<h4 class="des">Connect you to Other dimension</h4>
 			</a>
 		</div>
-		<h3>Web By DiamondSpaceGD, Hosted by GitHub</h3>
+		
+        <div class="footer" style="top: 96vh; height: 5vh;">
+            <h6>Web By DiamondSpaceGD, Hosted By Github</h6>
+        </div>
+	    <div>
+	        <p style="font-size:10px;color:#121212">spacing</p>
+	    </div>
 	</body>
 	<script>
 		function enCode() {

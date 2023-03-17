@@ -1,0 +1,78 @@
+html {
+	background-color: #121212;
+	color: white;
+	font-family: "Century Gothic";
+	overflow: auto;
+}
+
+a {
+	text-decoration: none;
+	color: #FDFDFD;
+	margin: 5px;
+	padding: 5px;
+	border: solid 1px #202020;
+	border-radius: 5%;
+	transition: background-color 0.25s, padding 0.5s, color 0.25s;
+	background-color: #202020;
+}
+
+a:hover {
+	background-color: #303030;
+	padding: 10px 5px 10px 5px;
+}
+
+a:active {
+	background-color: white;
+	color: black;
+}
+
+h3,h4,h5,h6 {margin: 0;}
+.des {color: #7F9F9F}
+img {border-radius: 5%}
+body {margin: 0;}
+
+.sel {
+	display: flex;
+	flex-direction: row;
+	overflow: auto;
+}
+
+.thumb {
+	width: 275px;
+	height: 150px;
+}
+
+.random {
+	overflow: hidden;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+}
+
+.wide {width: 100%}
+
+::-webkit-scrollbar {
+	width: 10px;
+	background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+	background: black;
+	border-radius: 15px;
+}
+
+.header,.footer {
+    position: fixed;
+    width: 100vw;
+    background-color: #303030;
+}
+
+.profile {
+    width: 40vw;
+    height: width;
+    margin: 0 30vw 0 30vw;
+}
+
+.introduct {
+    text-align: center;
+}
