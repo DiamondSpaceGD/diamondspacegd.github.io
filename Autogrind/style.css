@@ -1,0 +1,72 @@
+html {
+    background-image: url('image/BG.png');
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: "Century Gothic";
+}
+
+#login {
+    position: fixed;
+    background-color: #101010;
+    width: 85vw;
+    height: 85vh;
+    display: flex;
+    flex-direction: column;
+    padding: 5vh 5vw 5vh 5vw;
+    transition: height 0.5s, padding 0.5s;
+    overflow: auto;
+}
+
+input {
+    background: none;
+    border: solid 1px white;
+    border-radius: 10px;
+    color: white;
+    height: 5vh;
+}
+
+h1,h2,h3,h4,h5,h6 {margin: 0}
+
+.score, #score {
+    text-align: center;
+}
+
+.sscore {
+    border: solid 1px white;
+    border-radius: 10px;
+    padding: 25px 0 25px 0;
+}
+
+.buton {
+    margin: 1vh 20vw 1vh 20vw;
+    width: 55vw;
+    height: 70px;
+}
+
+button {
+    background: none;
+    border: solid 1px white;
+    border-radius: 10px;
+    color: white;
+    padding: 5vh 0 5vh 0;
+    transition: background-color 0.1s, font-size 0.1s;
+}
+
+button:active {
+    font-size: 10px;
+    background-color: black;
+}
+
+.upgrade {
+    display: flex;
+    flex-direction: row;
+    width: 96vw;
+    height: 100px;
+    padding: 10px 20px 10px 20px;
+}
+
+h2, h5 {
+    text-align: left;
+}

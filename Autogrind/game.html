@@ -1,0 +1,45 @@
+<meta name="viewport" content="width=device-width">
+<html>
+    <head>
+        <title>Flories Evolution</title>
+        <script type="text/javascript" src="script.js"></script>
+		<link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+		<audio loop id="music">
+			<source src="music/waltz.mp3" type="audio/mp3">
+		</audio>
+		
+		<div id="login">
+		    <h2>Flories Evolution</h2>
+		    <input type="text" id="newName">
+		    <button onclick="startGame()">Sign up</button>
+		    <button>(Save&Load system are not invented yet, so your progress cant be saved)</button>
+		</div>
+		
+        <div class="sscore">
+            <h1 class="score">Florabyte / FB</h1>
+            <h3 id="score">0</h3>
+            <h6 class="score" id="user">Username</h6>
+        </div>
+        <button onclick="addS()" class="buton" id="buton">Press</button>
+        <div class="shop">
+            <button class="upgrade" onclick="upA()">
+                <img src="image/iconA.png" width="75vh" height=width>
+                <div>
+                    <h2>Floriverse Stability</h2>
+                    <h5 id="infoA">+1 Florabyte per tap - 50 Score</h5>
+                    <h5 id="levelA">Level 1</h5>
+                </div>
+            </button>
+            <button class="upgrade" onclick="upB()">
+                <img src="image/iconB.png" width="75vh" height=width>
+                <div>
+                    <h2>Florie</h2>
+                    <h5 id="infoB">+0 Florabyte per second - 100 Score</h5>
+                    <h5 id="levelB">NOT ACTIVE</h5>
+                </div>
+            </button>
+        </div>
+    </body>
+</html>
