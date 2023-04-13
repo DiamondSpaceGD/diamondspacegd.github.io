@@ -9,12 +9,16 @@
 		<audio loop id="music">
 			<source src="music/waltz.mp3" type="audio/mp3">
 		</audio>
+		<audio loop id="music2">
+			<source src="music/vltava.mp3" type="audio/mp3">
+		</audio>
 		
 		<div id="login">
 		    <h2>Flories Evolution</h2>
 		    <input type="text" id="newName">
 		    <button onclick="startGame()">Sign up</button>
-		    <button>(Save&Load system are not invented yet, so your progress cant be saved)</button>
+		    <input type="file" id="florbyte" style="visibility: hidden;" onchange="FileReader(this.files[0])">
+		    <button onclick="document.getElementById('florbyte').click();" accept=".florbyte">Load Saves (.florbyte file)</button>
 		</div>
 		
         <div class="sscore">
@@ -41,5 +45,6 @@
                 </div>
             </button>
         </div>
+        <button onclick="saveData()" class="buton">Save progress</button>
     </body>
 </html>

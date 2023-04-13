@@ -80,6 +80,39 @@ function abbrNum(number, decPlaces) {
     return number;
 }
 
+function saveData() {
+    var filen = name + "-" + rScore + lvlA + lvlB + ".florbyte"
+    var d = new Date();
+    var userd = name + "\n" + Math.floor(score) + "\n" + addSc + "\n" + priceA + "\n" + lvlA + "\n" + worker + "\n" + priceB + "\n" + lvlB + "\n" + d.getTime();
+    download(filen, userd);
+}
+
+async function FileReader(file) {
+  text = await file.text();
+  loadSave();
+}
+function loadSave() {
+    const textArray = text.split("\n");
+    var d = new Date();
+    name = textArray[0];
+    addSc = Math.floor(textArray[2]);
+    priceA = Math.floor(textArray[3]);
+    lvlA = Math.floor(textArray[4]);
+    worker = textArray[5] * 1;
+    priceB = Math.floor(textArray[6]);
+    lvlB = Math.floor(textArray[7]);
+    score = Math.floor(textArray[1]) + (worker * ((d.getTime() - textArray[8]) / 100));
+    document.getElementById("user").innerHTML=name;
+    document.getElementById("login").style.height=0;
+    document.getElementById("login").style.paddingTop=0;
+    document.getElementById("login").style.paddingBottom=0;
+    if (lvlB >= 100) {
+        document.getElementById("music2").play();
+    } else {
+        document.getElementById("music").play();
+    }
+}
+
 function update() {
     rScore = Math.floor(score);
     disScore = abbrNum(rScore, 1)
