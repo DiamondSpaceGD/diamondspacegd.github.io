@@ -1,5 +1,10 @@
 html {
-    background-image: linear-gradient(#255050, #121212);
+    background-image: linear-gradient(to bottom, #000000, #000000A0), url("bg.png");
+    background-color: color(scheme url("bg.png"), #fallback-color);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: white;
     font-family: "Century Gothic";
     overflow: auto;
@@ -13,7 +18,7 @@ a {
     border: solid 2px #FAFAFA50;
     border-radius: 5%;
     transition: background-color 0.25s, padding 0.5s, color 0.25s;
-    background-color: #304040A0;
+    background-color: #403040A0;
 }
 
 a:hover {
@@ -30,7 +35,7 @@ h3,h4,h5,h6 {
     margin: 0;
 }
 .des {
-    color: #DFEFEF50
+    color: #EFEFEF50
 }
 img {
     border-radius: 5%
