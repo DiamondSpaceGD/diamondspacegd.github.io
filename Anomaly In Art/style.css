@@ -1,0 +1,135 @@
+html {
+    background-color: #001020;
+    color: white;
+    font-family: "Century Gothic";
+}
+
+body {
+    margin: 2px;
+}
+
+#alert {
+    position: fixed;
+    top: 10vh;
+    left: 85vw;
+    width: 7vh;
+    height: 7vh;
+    opacity: 0;
+}
+
+button {
+    background-color: #00000000;
+    border: none;
+    color: white;
+    margin: 5px 0 5px 0;
+}
+
+#image {
+    background-image: url('Image/R3DZ3R/fika/normal.png');
+    height: 75vh;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#report {
+    background-color: #000000A0;
+    position: fixed;
+    top: 35vh;
+    left: 25vw;
+    width: 50vw;
+    padding: 5px;
+    height: 45%;
+    overflow: auto;
+}
+
+.report {
+    display: flex;
+    flex-direction: row;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+}
+
+#send {
+    width: 100%;
+    margin: 5px 0 5px 0;
+    font-size: 20px;
+    border: solid 1px white;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+h6 {
+    margin: 0;
+}
+
+#disReport {
+    width: 99vw;
+    height: 10vh;
+    font-size: 20px;
+}
+
+#pre {
+    position: fixed;
+    top: 0;
+    margin: 40vh 0 40vh 0;
+    height: 10vh;
+    width: 10vw;
+    background-color: #000000A0;
+    font-size: 20px;
+}
+
+#nex {
+    position: fixed;
+    top: 0;
+    left: 90vw;
+    margin: 40vh 0 40vh 0;
+    height: 10vh;
+    width: 10vw;
+    background-color: #000000A0;
+    font-size: 20px;
+}
+
+#result, #lose {
+    background-color: black;
+    position: fixed;
+    width: 100vw;
+    height: 0vh;
+    text-align: center;
+    padding: 0;
+    overflow: auto;
+    z-index: 1;
+}
+
+#mainMenu {
+    background-color: black;
+    position: fixed;
+    width: 99vw;
+    height: 90vh;
+    text-align: center;
+    padding: 35vh 0 35vh 0;
+    overflow: auto;
+    z-index: 1;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background-color: #333;
+    border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
