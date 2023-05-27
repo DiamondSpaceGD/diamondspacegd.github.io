@@ -12,6 +12,8 @@ html {
 
 a {
     text-decoration: none;
+    display: flex;
+    flex-direction: column;
     color: #FDFDFD;
     margin: 5px;
     padding: 5px;
@@ -19,6 +21,11 @@ a {
     border-radius: 5%;
     transition: background-color 0.25s, padding 0.5s, color 0.25s;
     background-color: #403040A0;
+    width: 20vh;
+    height: 20vh;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 a:hover {
@@ -35,7 +42,8 @@ h3,h4,h5,h6 {
     margin: 0;
 }
 .des {
-    color: #EFEFEF50
+    color: #EFEFEF50;
+    font-size: 15px;
 }
 img {
     border-radius: 5%
@@ -47,6 +55,9 @@ body {
 .sel {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
     overflow: auto;
 }
 
@@ -58,8 +69,9 @@ body {
 .random {
     overflow: hidden;
     display: flex;
-    width: 100%;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .wide {
@@ -77,11 +89,17 @@ body {
 }
 
 .profile {
-    width: 58.5vh;
+    width: 100vw;
     height: width;
     border-radius: 0;
 }
 
 .introduct {
     text-align: center;
+}
+
+.icon {
+    width: 15vw;
+    height: 15vw;
+    
 }
