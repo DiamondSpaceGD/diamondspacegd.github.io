@@ -33,14 +33,18 @@ button {
 }
 
 #report {
-    background-color: #000000A0;
+    background-color: #000000C0;
     position: fixed;
-    top: 35vh;
+    top: 33vh;
     left: 25vw;
     width: 50vw;
     padding: 5px;
-    height: 45%;
+    height: 40%;
     overflow: auto;
+}
+
+.title {
+    margin-top: 0;
 }
 
 .report {
@@ -53,7 +57,7 @@ button {
     flex-direction: column;
 }
 
-#send {
+#send, #send2 {
     width: 100%;
     margin: 5px 0 5px 0;
     font-size: 20px;
@@ -89,7 +93,7 @@ h6 {
 #nex {
     position: fixed;
     top: 0;
-    left: 90vw;
+    right: 0;
     margin: 40vh 0 40vh 0;
     height: 10vh;
     width: 10vw;
@@ -114,7 +118,7 @@ h6 {
     width: 99vw;
     height: 90vh;
     text-align: center;
-    padding: 35vh 0 35vh 0;
+    padding: 5vh 0 5vh 0;
     overflow: auto;
     z-index: 1;
 }
@@ -132,4 +136,57 @@ input[type="range"]::-webkit-slider-thumb {
     background-color: white;
     border-radius: 50%;
     cursor: pointer;
+}
+
+.artistLogo {
+    width: 20vw;
+    height: 20vw;
+    padding: 3vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+.choose {
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    border: solid 1px white;
+    width: 99vw;
+}
+
+.gameLogo {
+    width: 99vw;
+    height: 40vw;
+    object-fit: cover;
+    object-position: center;
+}
+
+#m1, #m2 {
+    border: solid 1px white;
+    padding: 5px;
+}
+
+#send2 {
+    display: none;
+}
+
+#artName {
+    position: absolute;
+    bottom: 15vh;
+    left: 0;
+    width: 40vw;
+    margin: 0 30vw 0 30vw;
+    text-align: center;
+    background-color: #000000A0;
+}
+
+#anomalyFi {
+    position: absolute;
+    top: 5vh;
+    left: 0;
+    width: 40vw;
+    margin: 0 30vw 0 30vw;
+    text-align: center;
+    background-color: #000000A0;
+    display: none;
 }
