@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+            background-color: black;
+            color: white;
+        }
+
+        input, button {
+            background-color: black;
+            color: white;
+            border: solid 1px white;
+            width: 50%;
+        }
+
+        #login, #loading {
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h6 {
+            margin: 5px 0 20px 0;
+        }
+        
+        #progress {
+            width: 75vw;
+        }
+        
+        #bar {
+            width: 0%;
+            background-color: gray;
+            transition: width 0.1s;
+        }
+    </style>
+    <title>Hidden A</title>
+</head>
+<body>
+    <div id="loading">
+        <h1 id="lType">Sending data...</h1>
+        <div id="progress">
+            <h4 id="bar">0%</h4>
+        </div>
+        <h5 id="done">Please wait, this shouldn't take long</h5>
+    </div>
+    <div id="login">
+        <h5>Username</h5>
+        <input type="text" id="name">
+        <h5>Password</h5>
+        <input type="password" id="pass">
+        <h6>(Both Username and Password are case sensitive!)</h6>
+        <button onclick="send()">Login</button>
+    </div>
+</body>
+<script>
+    var loadi = {
+        type: [
+            "Sending data...",
+            "Getting level ID...",
+            "Checking if it exist...",
+            "Making sure you're doing this legit...",
+            "Doxxing random person...",
+            "Fixing 2.2 bugs...",
+            "Cleaning website's cache...",
+            "Level id: 91300888"
+            ],
+        loadRate: [
+            30,
+            20,
+            10,
+            20,
+            10,
+            10,
+            20,
+            0
+            ]
+    }
+    var choosen = 0;
+    var random = 0;
+    var progre = 0;
+    
+    function send() {
+        var name = document.getElementById("name").value;
+        var pass = document.getElementById("pass").value;
+        if (name == "DiamondSpaceGD") {
+            if (pass == "ILoveFurry") {
+                document.getElementById("login").style.display = "none";
+                var load = setInterval(update, 100);
+            } else {
+                alert("Incorrect password!");
+            }
+        } else {
+            alert("Incorrect Username");
+        }
+    }
+    
+    function update() {
+        random = Math.floor(Math.random() * loadi.loadRate[choosen]);
+        progre = progre + random;
+        if (progre > 100) {
+            choosen++;
+            document.getElementById("lType").innerHTML = loadi.type[choosen];
+            progre = 0;
+        }
+        if (choosen == 7) {
+            document.getElementById("done").innerHTML = "Done, have fun OwO";
+        }
+        document.getElementById("bar").innerHTML = progre + "%";
+        document.getElementById("bar").style.width = progre + "%";
+    }
+</script>
+</html>
