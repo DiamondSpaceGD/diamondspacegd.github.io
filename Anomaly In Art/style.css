@@ -1,11 +1,17 @@
+@font-face {
+    font-family: "KuroCode";
+    src: url("KurocodeV1.ttf");
+    font-display: swap;
+}
+
 html {
     background-color: #001020;
     color: white;
-    font-family: "Century Gothic";
 }
 
 body {
     margin: 2px;
+    font-family: "Century Gothic";
 }
 
 #alert {
@@ -22,6 +28,7 @@ button {
     border: none;
     color: white;
     margin: 5px 0 5px 0;
+    font-family: inherit;
 }
 
 #image {
@@ -34,12 +41,13 @@ button {
 
 #report {
     background-color: #000000C0;
-    position: fixed;
-    top: 33vh;
-    left: 25vw;
-    width: 50vw;
-    padding: 5px;
-    height: 40%;
+    position: absolute;
+    bottom: 25vh;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    min-width: 200px;
+    max-width: 400px;
     overflow: auto;
 }
 
@@ -82,23 +90,20 @@ h6 {
 
 #pre {
     position: fixed;
-    top: 0;
-    margin: 40vh 0 40vh 0;
+    top: 40vh;
+    left: 0;
     height: 10vh;
     width: 10vw;
     background-color: #000000A0;
-    font-size: 20px;
 }
 
 #nex {
     position: fixed;
-    top: 0;
+    top: 40vh;
     right: 0;
-    margin: 40vh 0 40vh 0;
     height: 10vh;
     width: 10vw;
     background-color: #000000A0;
-    font-size: 20px;
 }
 
 #result, #lose {
@@ -161,7 +166,7 @@ input[type="range"]::-webkit-slider-thumb {
     object-position: center;
 }
 
-#m1, #m2 {
+#m1, #m2, #m3 {
     border: solid 1px white;
     padding: 5px;
 }

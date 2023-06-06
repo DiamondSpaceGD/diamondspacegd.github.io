@@ -59,6 +59,7 @@ var displayAF = true;
 //modifier -----------------------------------------
 var instantRep = false;
 var anomalyFind = false;
+var kuroCo = false;
 
 document.addEventListener("keydown", event => {
     if (isStart) {
@@ -91,6 +92,17 @@ function switchMod(mod) {
         } else {
             document.getElementById("m2").style.backgroundColor = "black";
             document.getElementById("anomalyFi").style.display = "none";
+        }
+    }
+    if (mod == "kuroCode") {
+        kuroCo = !kuroCo;
+        document.getElementById("description").innerHTML = "Turn game font into a strange symbols";
+        if (kuroCo) {
+            document.getElementById("m3").style.backgroundColor = "#404040";
+            document.body.style.fontFamily = "KuroCode";
+        } else {
+            document.getElementById("m3").style.backgroundColor = "black";
+            document.body.style.fontFamily = "Century Gothic";
         }
     }
 }
